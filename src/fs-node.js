@@ -120,7 +120,7 @@ class FSNode extends React.Component {
               <div className="FSNode-icon" onClick={!this.props.noninteractive && (() => this.toggleOpen())}>{this._getIcon()}</div>
               <div className="FSNode-text" onClick={!this.props.noninteractive && (() => this.toggleSelect())}>{this.state.node.name}</div>
             </div>
-            {this.state.node.childNodes && this.state.node.opened && (
+            {this.state.node.childNodes && (
               <exports.FSBranch
                 ref={ref => ref && (this._childNodes = ref._childNodes)}
                 childNodes={this.state.node.childNodes}
